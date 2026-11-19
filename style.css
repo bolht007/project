@@ -1,0 +1,163 @@
+:root {
+  --bg: #eef1f6;
+  --paper: #ffffff;
+  --ink: #1f2933;
+  --muted: #6b7785;
+  --accent: #2f6fed;
+  --accent-dark: #1d4fb8;
+  --side: #1e2a3d;
+  --side-ink: #e8edf5;
+  --line: #e3e8ef;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Prompt", "Noto Sans Thai", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  padding: 32px 16px;
+}
+
+.resume {
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--paper);
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(30, 42, 61, 0.15);
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  background: var(--side);
+  color: var(--side-ink);
+  padding: 40px 28px;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  background: linear-gradient(135deg, var(--accent), #7aa7ff);
+  display: grid;
+  place-items: center;
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: #fff;
+  border: 4px solid rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+}
+/* รูปต้นฉบับเป็นแนวนอน ใบหน้าอยู่ซ้ายบน จึงเลื่อนและซูมให้เห็นหน้าในวงกลม */
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 33% 15%;
+  transform: scale(1.9);
+  transform-origin: 33% 22%;
+}
+
+.sidebar h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8fb2ff;
+  margin: 28px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact li, .langs li { list-style: none; font-size: 0.92rem; margin-bottom: 8px; }
+.contact span { display: block; font-size: 0.75rem; color: #9aa8bd; }
+.contact a { color: var(--side-ink); text-decoration: none; }
+.contact a:hover { text-decoration: underline; }
+
+.skill { margin-bottom: 12px; font-size: 0.9rem; }
+.bar { height: 6px; background: rgba(255, 255, 255, 0.15); border-radius: 99px; margin-top: 4px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), #7aa7ff); border-radius: 99px; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 0.8rem;
+}
+
+/* ---------- Main ---------- */
+.main { padding: 44px 44px 40px; }
+
+.main header { margin-bottom: 8px; }
+.main h1 { font-size: 2.3rem; line-height: 1.2; }
+.main .role { color: var(--accent); font-size: 1.15rem; font-weight: 500; margin-top: 4px; }
+
+section { margin-top: 30px; }
+
+.main h2 {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+.main h2::after { content: ""; flex: 1; height: 2px; background: var(--line); }
+.main h2::before {
+  content: "";
+  width: 10px; height: 22px;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.about p { color: #3e4c5b; }
+
+.item {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 20px;
+  border-left: 2px solid var(--line);
+}
+.item::before {
+  content: "";
+  position: absolute;
+  left: -7px; top: 6px;
+  width: 12px; height: 12px;
+  background: var(--paper);
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+}
+.item h3 { font-size: 1.02rem; }
+.item .meta { font-size: 0.85rem; color: var(--muted); margin-bottom: 4px; }
+.item p, .item li { font-size: 0.93rem; color: #3e4c5b; }
+.item ul { padding-left: 18px; }
+
+.projects { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.project {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.project:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(47, 111, 237, 0.15); }
+.project h3 { font-size: 0.98rem; color: var(--accent-dark); }
+.project p { font-size: 0.88rem; color: #3e4c5b; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .resume { grid-template-columns: 1fr; }
+  .main { padding: 32px 24px; }
+  .projects { grid-template-columns: 1fr; }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  body { background: #fff; padding: 0; }
+  .resume { box-shadow: none; border-radius: 0; max-width: none; }
+  .sidebar, .avatar, .bar i { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .project:hover { transform: none; box-shadow: none; }
+}
