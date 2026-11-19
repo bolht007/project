@@ -3,107 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#060a12">
   <title>ประวัติส่วนตัว | ชนนัช หนูม่วง</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main class="resume">
+<body id="top">
 
-    <!-- ===== แถบด้านซ้าย ===== -->
-    <aside class="sidebar">
-      <div class="avatar"><img src="photo.jpg" alt="รูปโปรไฟล์ ชนนัช หนูม่วง"></div>
+  <!-- ===== แถบเมนู ===== -->
+  <header class="bar">
+    <div class="wrap bar-in">
+      <a class="brand" href="#top"><i class="led"></i>Beam</a>
+      <nav aria-label="เมนูหลัก">
+        <a href="#skills">ทักษะ</a>
+        <a href="#study">การศึกษา</a>
+        <a href="#intern">ฝึกงาน</a>
+        <a href="#projects">โปรเจกต์</a>
+        <a href="#plan">แผนศึกษาต่อ</a>
+        <a href="#contact">ติดต่อ</a>
+      </nav>
+    </div>
+  </header>
 
-      <h2>ข้อมูลติดต่อ</h2>
-      <ul class="contact">
-        <li><span>โทรศัพท์</span><a href="tel:0636632793">063-663-2793</a></li>
-        <li><span>สถานศึกษา</span>SPTC วิทยาลัยเทคนิคสมุทรปราการ</li>
-        <li><span>ห้องเรียน</span>สทส.2/1</li>
-      </ul>
+  <main>
 
-      <h2>ทักษะ</h2>
-      <div class="tags">
-        <span>PHP</span>
-        <span>MySQL</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>Web App</span>
-        <span>IT Support</span>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <svg class="cables" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">
+        <path class="cable cable-amber" d="M-20 420 C 240 430, 420 200, 700 230 S 1000 120, 1220 160"/>
+        <path class="cable cable-blue"  d="M-20 480 C 300 480, 380 300, 640 330 S 1000 520, 1220 420"/>
+        <path class="cable cable-aqua"  d="M-20 540 C 260 540, 460 430, 700 450 S 1040 300, 1220 330"/>
+        <path class="packet p-amber" d="M-20 420 C 240 430, 420 200, 700 230 S 1000 120, 1220 160"/>
+        <path class="packet p-blue"  d="M-20 480 C 300 480, 380 300, 640 330 S 1000 520, 1220 420"/>
+        <path class="packet p-aqua"  d="M-20 540 C 260 540, 460 430, 700 450 S 1040 300, 1220 330"/>
+      </svg>
+
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="status"><i class="led" style="--d:.3s"></i>กำลังศึกษา ปวส.2 สาขา IT</p>
+          <h1 class="wordmark" id="wordmark">BEAM</h1>
+          <p class="fullname">ชนนัช หนูม่วง</p>
+          <p class="lead">
+            นักศึกษา ปวส.2 สาขา IT ที่ SPTC สนใจงานพัฒนาเว็บแอปพลิเคชันและงานด้าน IT
+            มีประสบการณ์ฝึกงานด้าน IT 14 สัปดาห์ และทำโปรเจกต์เว็บด้วย PHP/MySQL
+            ตั้งเป้าเรียนต่อด้าน IT ที่ SIT KMUTT เพื่อต่อยอดความรู้
+            และมีรายได้ที่มั่นคงไว้ดูแลครอบครัว
+          </p>
+          <div class="actions">
+            <a class="btn btn-main" href="tel:0636632793">โทร 063-663-2793</a>
+            <a class="btn btn-ghost" href="#plan">ดูแผนศึกษาต่อ</a>
+          </div>
+        </div>
+
+        <div class="shot-wrap">
+          <div class="shot-edge">
+            <div class="shot">
+              <img src="photo.jpg" alt="ชนนัช หนูม่วง ยืนหน้าตู้แร็คเน็ตเวิร์กในชุดนักศึกษา">
+              <div class="scan" aria-hidden="true"></div>
+              <p class="shot-tag"><i class="led" style="--d:.9s"></i>SPTC ห้อง สทส.2/1</p>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <h2>ภาษา</h2>
-      <ul class="langs">
-        <li>ไทย เป็นภาษาหลัก</li>
+    <!-- ===== ทักษะ ===== -->
+    <section class="block wrap" id="skills">
+      <h2 class="sec-title">ทักษะ</h2>
+      <ul class="patch panel">
+        <li class="port"><i class="led" style="--d:1.0s"></i><span class="socket"></span><b>PHP</b></li>
+        <li class="port"><i class="led" style="--d:1.15s"></i><span class="socket"></span><b>MySQL</b></li>
+        <li class="port"><i class="led" style="--d:1.3s"></i><span class="socket"></span><b>HTML</b></li>
+        <li class="port"><i class="led" style="--d:1.45s"></i><span class="socket"></span><b>CSS</b></li>
+        <li class="port"><i class="led" style="--d:1.6s"></i><span class="socket"></span><b>Web App</b></li>
+        <li class="port"><i class="led" style="--d:1.75s"></i><span class="socket"></span><b>IT Support</b></li>
       </ul>
-    </aside>
+    </section>
 
-    <!-- ===== เนื้อหาหลัก ===== -->
-    <div class="main">
-      <header>
-        <h1>ชนนัช หนูม่วง</h1>
-        <p class="role">Beam · นักศึกษา ปวส.2 สาขา IT</p>
-      </header>
-
-      <section class="about">
-        <h2>เกี่ยวกับฉัน</h2>
-        <p>
-          นักศึกษา ปวส.2 สาขา IT ที่ SPTC สนใจงานพัฒนาเว็บแอปพลิเคชันและงานด้าน IT
-          มีประสบการณ์ฝึกงานด้าน IT 14 สัปดาห์ และทำโปรเจกต์เว็บด้วย PHP/MySQL
-          ตั้งเป้าเรียนต่อด้าน IT ที่ SIT KMUTT เพื่อต่อยอดความรู้
-          และมีรายได้ที่มั่นคงไว้ดูแลครอบครัว
-        </p>
-      </section>
-
-      <section>
-        <h2>การศึกษา</h2>
-        <div class="item">
-          <h3>ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) สาขา IT</h3>
-          <div class="meta">SPTC วิทยาลัยเทคนิคสมุทรปราการ · กำลังศึกษาชั้นปีที่ 2 · ห้อง สทส.2/1</div>
+    <!-- ===== การศึกษา + ฝึกงาน ===== -->
+    <div class="block wrap cols">
+      <section id="study">
+        <h2 class="sec-title">การศึกษา</h2>
+        <div class="timeline">
+          <article class="step">
+            <h3>ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) สาขา IT</h3>
+            <p class="where">SPTC วิทยาลัยเทคนิคสมุทรปราการ</p>
+            <p class="note">กำลังศึกษาชั้นปีที่ 2 ห้อง สทส.2/1</p>
+          </article>
         </div>
       </section>
 
-      <section>
-        <h2>ประสบการณ์ฝึกงาน</h2>
-        <div class="item">
-          <h3>ฝึกงานด้าน IT</h3>
-          <div class="meta">Bangkok Steel Industry (BSI) · 14 สัปดาห์</div>
-          <ul>
-            <li>ปฏิบัติงานด้าน IT ตามที่ได้รับมอบหมาย</li>
-            <li>บันทึกการทำงานด้วย logbook</li>
-            <li>จัดทำและส่งงานสรุปเมื่อจบการฝึกงาน</li>
-          </ul>
-        </div>
-      </section>
-
-      <section>
-        <h2>โปรเจกต์</h2>
-        <div class="projects">
-          <div class="project">
-            <h3>IT Asset Web App</h3>
-            <p>เว็บแอปจัดการทรัพย์สินด้าน IT พัฒนาด้วย PHP และ MySQL</p>
-          </div>
-          <div class="project">
-            <h3>IP Hierarchy Web App</h3>
-            <p>เว็บแอปจัดการลำดับชั้นของ IP ทำร่วมกับเจ็ท</p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>แผนศึกษาต่อ</h2>
-        <div class="item">
-          <h3>เป้าหมายหลัก: SIT KMUTT</h3>
-          <div class="meta">คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</div>
-        </div>
-        <div class="item">
-          <h3>สถาบันอื่นที่สนใจสมัคร</h3>
-          <div class="meta">KMITL · KMUTNB · RMUTK</div>
+      <section id="intern">
+        <h2 class="sec-title">ประสบการณ์ฝึกงาน</h2>
+        <div class="timeline">
+          <article class="step">
+            <h3>ฝึกงานด้าน IT</h3>
+            <p class="where">Bangkok Steel Industry (BSI)</p>
+            <span class="chip">14 สัปดาห์</span>
+            <ul>
+              <li>ปฏิบัติงานด้าน IT ตามที่ได้รับมอบหมาย</li>
+              <li>บันทึกการทำงานด้วย logbook</li>
+              <li>จัดทำและส่งงานสรุปเมื่อจบการฝึกงาน</li>
+            </ul>
+          </article>
         </div>
       </section>
     </div>
 
+    <!-- ===== โปรเจกต์ ===== -->
+    <section class="block wrap" id="projects">
+      <h2 class="sec-title">โปรเจกต์</h2>
+      <div class="projects">
+        <article class="faceplate">
+          <header><i class="led" style="--d:2s"></i><h3>IT Asset Web App</h3></header>
+          <p>เว็บแอปจัดการทรัพย์สินด้าน IT</p>
+          <div class="tech"><span>PHP</span><span>MySQL</span></div>
+        </article>
+        <article class="faceplate">
+          <header><i class="led" style="--d:2.15s"></i><h3>IP Hierarchy Web App</h3></header>
+          <p>เว็บแอปจัดการลำดับชั้นของ IP</p>
+          <div class="tech"><span class="team">ทำร่วมกับเจ็ท</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== แผนศึกษาต่อ ===== -->
+    <section class="block wrap" id="plan">
+      <h2 class="sec-title">แผนศึกษาต่อ</h2>
+      <div class="plan panel">
+        <svg class="topo" viewBox="0 0 900 380" role="img" aria-labelledby="topo-title">
+          <title id="topo-title">แผนผังเส้นทางศึกษาต่อ จาก SPTC ไปยัง SIT KMUTT เป็นเป้าหมายหลัก และ KMITL, KMUTNB, RMUTK เป็นทางเลือกอื่น</title>
+
+          <path class="link" d="M170 190 C 380 190, 380 150, 600 150"/>
+          <path class="link" d="M170 190 C 380 190, 380 235, 600 235"/>
+          <path class="link" d="M170 190 C 380 190, 380 320, 600 320"/>
+          <path class="link main" d="M170 190 C 380 190, 380 55, 600 55"/>
+          <path class="flow" d="M170 190 C 380 190, 380 55, 600 55"/>
+
+          <rect class="node src" x="30" y="158" width="140" height="64" rx="10"/>
+          <text class="t-big" x="52" y="188">SPTC</text>
+          <text class="t-sub" x="52" y="209">ปวส.2 สาขา IT</text>
+
+          <rect class="node main" x="600" y="22" width="270" height="66" rx="10"/>
+          <text class="t-big main-text" x="624" y="52">SIT KMUTT</text>
+          <text class="t-sub" x="624" y="75">เป้าหมายหลัก</text>
+
+          <rect class="node" x="600" y="127" width="210" height="46" rx="10"/>
+          <text class="t-mid" x="622" y="157">KMITL</text>
+
+          <rect class="node" x="600" y="212" width="210" height="46" rx="10"/>
+          <text class="t-mid" x="622" y="242">KMUTNB</text>
+
+          <rect class="node" x="600" y="297" width="210" height="46" rx="10"/>
+          <text class="t-mid" x="622" y="327">RMUTK</text>
+        </svg>
+
+        <!-- สำหรับจอเล็ก: แทนแผนผังด้วยรายการ -->
+        <ul class="topo-list">
+          <li class="main"><i class="led"></i>SIT KMUTT<small>เป้าหมายหลัก</small></li>
+          <li>KMITL</li>
+          <li>KMUTNB</li>
+          <li>RMUTK</li>
+        </ul>
+
+        <p class="plan-note">SIT KMUTT คือคณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
+      </div>
+    </section>
+
   </main>
+
+  <!-- ===== ติดต่อ ===== -->
+  <footer class="contact wrap" id="contact">
+    <h2 class="sec-title">ติดต่อ</h2>
+    <div class="contact-panel panel">
+      <a class="btn btn-main" href="tel:0636632793">โทร 063-663-2793</a>
+      <dl>
+        <dt>สถานศึกษา</dt>
+        <dd>SPTC วิทยาลัยเทคนิคสมุทรปราการ</dd>
+        <dt>ห้องเรียน</dt>
+        <dd>สทส.2/1</dd>
+      </dl>
+      <dl>
+        <dt>ภาษา</dt>
+        <dd>ไทย เป็นภาษาหลัก</dd>
+      </dl>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
